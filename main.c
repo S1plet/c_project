@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "cdataframe.h"
 #include "column.h"
 
 int main(){
     // Creating dataframe of 5 columns
-    DATAFRAME df = create_dataframe(5);
+    DATAFRAME *df = create_dataframe(5);
 
     // Allows the user to fill our dataframe
     fill_dataframe(df);
@@ -15,5 +16,5 @@ int main(){
     // Allows the user to check if 3 is in the dataframe
     check_if_value_in_dataframe(df, 3);
 
-    return 0
+    return 0;
 }
