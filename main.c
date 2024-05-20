@@ -1,11 +1,13 @@
+// We can test the dataframe here
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "cdataframe.h"
 #include "column.h"
 
-int main(){
+int main() {
     // Example of the use of a dataframe
-    
+
     DATAFRAME* df = create_dataframe(3);
 
     fill_dataframe(df);
