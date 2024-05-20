@@ -36,7 +36,7 @@ int insert_value(COLUMN* col, int value) {
         col->phys_size = REALLOC_SIZE;
     }
     else if (col->log_size == col->phys_size) {
-        int* temp = (int*)realloc(col->data, col->phys_size + REALLOC_SIZE * sizeof(int)); // Temp contains the memory of "col" + the memory the new value
+        int* temp = (int*)realloc(col->data, (col->phys_size + REALLOC_SIZE) * sizeof(int)); // Temp contains the memory of "col" + the memory of 256 new integers
         if (temp == NULL) {
             return 0;
         }
@@ -50,7 +50,7 @@ int insert_value(COLUMN* col, int value) {
     return 1;
 }
 
-// Delets the column
+// Deletes the column
 void delete_column(COLUMN* col) { // Frees the data THEN the column itself as "col->data" memory would still be stored if only "col" was freed
     free(col->data);
     free(col);
