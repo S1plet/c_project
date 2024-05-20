@@ -1,3 +1,5 @@
+// This file contains all the functions associated to the columns
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "column.h"
