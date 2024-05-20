@@ -1,3 +1,5 @@
+// Header of column.c
+
 #ifndef COLUMN_H
 #define COLUMN_H
 
