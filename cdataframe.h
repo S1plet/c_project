@@ -1,23 +1,24 @@
 #ifndef CDATAFRAME_H
 #define CDATAFRAME_H
+#include "column.h"
 
 struct dataframe{
     COLUMN **columns;
-    int num_columns;
+    int nb_columns;
 };
 typedef struct dataframe DATAFRAME;
 
-DATAFRAME *create_dataframe(int num_columns);
+DATAFRAME *create_dataframe(int nb_columns);
 
 void fill_dataframe(DATAFRAME *dataframe);
 
-void hardfill_dataframe(DATAFRAME *dataframe, int num_rows);
+void hardfill_dataframe(DATAFRAME *dataframe, int nb_rows);
 
 void display_dataframe(DATAFRAME *dataframe);
 
-void display_partial_dataframe_rows(DATAFRAME *dataframe, int num_rows);
+void display_partial_dataframe_rows(DATAFRAME *dataframe, int nb_rows);
 
-void display_partial_dataframe_columns(DATAFRAME *dataframe, int num_columns);
+void display_partial_dataframe_columns(DATAFRAME *dataframe, int nb_columns);
 
 void add_row(DATAFRAME *dataframe, int *row);
 
@@ -27,9 +28,9 @@ void add_column(DATAFRAME *dataframe);
 
 void delete_column_at_index(DATAFRAME *dataframe, int column_index);
 
-void rename_column(DATAFRAME *dataframe, int column_index, const char* title);
+void rename_column(DATAFRAME *dataframe, int column_index, char* title);
 
-void check_if_value_in_dataframe(DATAFRAME *dataframe, int value);
+void check_if_value_in_dataframe(DATAFRAME* dataframe, int value);
 
 void replace_value(DATAFRAME *dataframe, int column_index, int row_index, int value);
 
@@ -41,7 +42,7 @@ void display_number_of_rows(DATAFRAME *dataframe);
 
 void display_number_of_columns(DATAFRAME *dataframe);
 
-int display_number_of_cells_equal(DATAFRAME *dataframe, int value);
+void display_number_of_cells_equal(DATAFRAME *dataframe, int value);
 
 int display_number_of_cells_less_than(DATAFRAME *dataframe, int value);
 
