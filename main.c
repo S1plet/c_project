@@ -4,17 +4,15 @@
 #include "column.h"
 
 int main(){
-    // Creating dataframe of 5 columns
-    DATAFRAME *df = create_dataframe(5);
+    DATAFRAME* df = create_dataframe(3);
 
-    // Allows the user to fill our dataframe
     fill_dataframe(df);
 
-    // Displays the number of columns
-    display_number_of_columns(df);
+    rename_column(df, 2, "col_3");
 
-    // Allows the user to check if 3 is in the dataframe
-    check_if_value_in_dataframe(df, 3);
+    display_dataframe(df);
+
+    display_number_of_cells_equal(df, 4);
 
     return 0;
 }
