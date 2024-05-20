@@ -1,3 +1,5 @@
+// This file contains all the functions associated to the dataframe (some use the ones in columns.c)
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "cdataframe.h"
