@@ -17,12 +17,12 @@ void delete_column(COLUMN *col);
 
 void print_col(COLUMN *col);
 
-int num_occurrences(COLUMN *col, int value);
+int nb_occurrences(COLUMN *col, int value);
 
 int value_at_index(COLUMN *col, int index);
 
-int num_values_greater(COLUMN *col, int value);
+int nb_values_greater(COLUMN *col, int value);
 
-int num_values_smaller(COLUMN *col, int value);
+int nb_values_smaller(COLUMN *col, int value);
 
 #endif
